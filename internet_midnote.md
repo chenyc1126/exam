@@ -167,13 +167,36 @@ LAN由於範圍較小，速度會較快，維護費用較便宜，更容易維�
 #### **security planning的四個原則**
 ![](https://hackmd.io/_uploads/rJWXzkTMp.png)
 
+#### <font color="#f00">(110)(111) </font>數位憑證驗證（Digital Certificate Authentication）
+> 最安全的憑證機制
+> ![](https://hackmd.io/_uploads/Hkia6fzma.png)
+
+> 特點：
+> 數位證書的驗證方式不需要使用者的敏感資料（如身分證字號、帳號密碼等)，就可以進行驗證，可以防範網路釣魚等攻擊，故認為數位證書較其他方式安全。
+
+#### <font color="#f00">(111) </font>kill chain
+> Kill chain 為駭客一步步攻擊的手法
+> 1. 偵查：觀察目標對象，取得目標相關資料。
+> 
+> 2. 武裝：透過開源軟體或自行開發惡搞程式。
+> 
+> 3. 遞迭：想辦法將惡意程式迭入企業內部。
+>  
+> 4. 漏洞利用：利用目標公司的漏洞。
+> 
+> 5. 安裝：將程式安裝好，或安裝後以便下載其他惡意程式。
+> 
+> 6. 發令與控制：持續控制目標公司網路。
+> 
+> 7.行動：持續做出行動以達到最初目的，如竊取密碼、信用卡資料等
+
 ## 第四章
-#### **QoS（Quality of Service）是一種網絡管理和控制"技術"，旨在確保在計算機網絡中實現特定的服務質量水平。**
+#### **<font color="#f00">(110)</font> QoS（Quality of Service）是一種網絡管理和控制"技術"，旨在確保在計算機網絡中實現特定的服務質量水平。**
 ![](https://hackmd.io/_uploads/SJ7bIkpzT.png)
 :::success
 **簡單說明QoS跟SLAs的關聯。**
 
-**SLAs（Service Level Agreements）**:"合同或協議"，其中明確規定了服務提供商應遵守的性能指標和客戶期望的服務質量水平。這些性能指標通常包括可用性、延遲、丟包率等。SLAs確保客戶得到他們所需的服務質量，並在不符合 SLA 標準時提供了法律依據和解決爭議的方式。
+**SLAs（Service Level Agreements）**:"合同或協議"，其中明確規定了服務提供商應遵守的性能指標和客戶期望的服務質量水平。SLAs確保客戶得到他們所需的服務質量，並在不符合 SLA 標準時提供了法律依據和解決爭議的方式。
 
 QoS 和 SLAs 相互關聯，因為 QoS 技術通常用於實現 SLAs 中規定的性能指標。通過使用 QoS，服務提供商可以確保不同類型的數據流能夠達到 SLA 中設定的服務水平目標。因此，QoS 是實現 SLAs 的一個關鍵工具，有助於確保服務提供商能夠履行其在 SLA 中所做的承諾，並提供客戶所期望的服務質量。
 
@@ -190,7 +213,7 @@ QoS 和 SLAs 相互關聯，因為 QoS 技術通常用於實現 SLAs 中規定�
 > **solution 3: Reservation 預留**
 > QoS保證了某些流量的預留容量，因此這些流量總是能夠通過。
 
-#### Threat environment, Plan, Protect, Response 之間的關係
+#### <font color="#f00">(110)</font> Threat environment, Plan, Protect, Response 之間的關係
 ![](https://hackmd.io/_uploads/ByzlbeTfT.png)
 > **Threat Environment（威脅環境）：**
 威脅環境是指潛在威脅和風險的狀態和條件，可能對組織或系統造成損害。這包括外部和內部威脅，如惡意攻擊、自然災害、技術故障等
@@ -207,6 +230,12 @@ QoS 和 SLAs 相互關聯，因為 QoS 技術通常用於實現 SLAs 中規定�
 > 3. Defense in Depth 建議在安全策略中實施多層次的安全措施，以應對多個安全威脅。
 > 4. Minimum Permissions 要求限制人員、資源和操作的權限，並實行全面的存取控制。
 
+**Protect**
+進行保護措施(eg.限制存取權、防火牆等)
+
+**Respond**
+雖然有了上述的保護措施，但仍不可能做到100%的阻擋，仍有被攻擊的風險，因此需要制定良好的回應機制，遇到狀況方能即刻反映。
+
 #### **SNMP, Simple Network Management Protocol (簡單網絡管理協議)**
 > SNMP（Simple Network Management Protocol，簡單網絡管理協議）是一種用於管理和監控網絡設備的協議。它是一個應用層協議，通常用於網絡管理系統（NMS）與許多不同類型的網絡設備之間的通信。
 > Central Manager：Central Manager與每個被管理的設備進行通信。
@@ -216,3 +245,61 @@ QoS 和 SLAs 相互關聯，因為 QoS 技術通常用於實現 SLAs 中規定�
 ####  **SDN (Software-Defined Networking)**
 > SDN (Software-Defined Networking) 是一種網絡架構和技術，旨在改進和簡化網絡管理、配置和運營，使網絡更加靈活，可定制和易於管理，並支持更多的應用程序和服務。
 通常使用一個中心控制器來管理整個網絡。這個控制器可以根據流量情況進行決策，調整路由，實現流量工程和提供安全性。這種集中化控制有助於實現更好的網絡管理和安全性。
+
+#### <font color="#f00">(110)</font> **Jitter**
+> **Latency**：資料傳遞的延遲時間
+> 
+> **Jitter**：資料傳遞時間的變動量，要降低Jitter需要很大的成本
+> 
+> **High Jitter**：資料傳輸時間的變動量很大，如看影片一下很順一下很卡
+> 
+> **Low Jitter** ：資料傳輸時間的變動量很小，如看影片一直都很順
+
+
+## 第五章
+
+#### **IEEE 802.x 由  IEEE LAN/MAN Standards Committee 制定的一系列網路標準**
+> **802.1**：這是一個通用標準，用於支援多個工作組的標準化工作。
+> 
+> **802.3**：這一系列標準涵蓋了乙太網技術，包括有線區域網絡的各種方面
+> 
+>  **802.11**：這一系列標準用於無線區域網絡（Wi-Fi）技術
+:::info
+### 乙太網in實體層
+UTP(for 乙太網的電纜)最多只能100m，超過的話訊號就會降級，導致無法正確讀取
+:::
+
+#### **Baseband（基頻） vs Broadband（寬頻）** Transmission
+> **Baseband（基頻）**：使用單一頻帶寬傳輸數據信號，通常在較低的頻率範圍內。常用於數位訊號和基本數據傳輸應用，如乙太網（Ethernet）。
+> 因為baseband便宜又簡單，所以現在的LAN多採用此技術。
+
+> **Broadband（寬頻）**：使用多個頻帶以同時傳輸多個信號。它通常在較高的頻率範圍內工作，允許同時傳輸多個不同頻段的數據。用於多媒體應用，如有線電視、有線寬頻互聯網。
+> 如果運用擴大器(amplifier)就可以傳得更遠。
+
+#### **Terminal Crosstalk Interferenc (終端串擾干擾)**
+**串擾干擾（Crosstalk Interference）** 通信或電線系統中的一種干擾現象。這種干擾是由信號在電纜、導線或其他媒介中相互影響而產生的。當電流通過一條線時，它可以產生磁場，這個磁場可以影響附近的其他線路，導致其中的信號受到影響或干擾。
+因為通常wire是纏繞的，但在終端的時候會是直的放入RJ-45("Registered Jack"（註冊插孔）)中，所以在終端的時候crosstalk interference最嚴重。
+![](https://hackmd.io/_uploads/ryW6dAg7T.png)
+
+#### **光纖傳輸（Optical Fiber Transmission）**
+通過使用光學纖維來傳輸數據、聲音和視頻信號。光學纖維是一種由玻璃或塑料製成的非常細的纖維，可以將數據信號轉換為光信號，並通過光纖將信號傳送到目的地。
+
+![](https://hackmd.io/_uploads/Skya11Z7a.png)
+
+:::info
+### 乙太網in data link 層
+
+![](https://hackmd.io/_uploads/Sy0s4yWQp.png)
+:::
+
+### Advanced Ethernet Capabilities
+
+![](https://hackmd.io/_uploads/rkdfLJ-7a.png)
+
+控制器（Controller）：控制器是 SDN 架構的核心元件，負責制定網絡策略以及指導數據層（Data Plane）上的網絡設備
+控制層（Control Plane）：控制層位於 SDN 架構的頂部，主要功能是網絡管理、策略制定和流量工程。
+數據層（Data Plane）：數據層包括實際的網絡設備，如交換機和路由器。這些設備根據來自控制層的指示，將數據包從一個地方傳送到另一個地方，實現網絡數據的傳輸。
+
+## 第六章
+
+### Wireless Propagation Problem
